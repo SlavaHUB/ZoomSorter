@@ -7,6 +7,7 @@ public class FileCreator
 
     public FileCreator()
     {
+        
     }
     
     public FileCreator(string sourcePath, string targetPath)
