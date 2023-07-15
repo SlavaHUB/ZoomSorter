@@ -4,6 +4,7 @@ public class FileCopyRater
 {
     private readonly string _targetPath;
     private readonly string _fullPath;
+    
     public FileCopyRater(string copyPath, string fullPath)
     {
         _targetPath = copyPath;
