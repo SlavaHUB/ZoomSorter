@@ -20,13 +20,12 @@ public class FileCopyRater
         
         foreach (var directoryInfo in directoriesInfo)
         {
-           
+           Console.WriteLine();
             foreach (string filePath in directoryInfo.videos)
             {
-                string fileName = Path.GetFileName(filePath);
+                string fileName = Path.GetFileName(directoryInfo.ToString());
                 string weekPath = Path.Combine(_fullPath, directoryInfo.dayOfWeek, directoryInfo.categories);
                 string targetFilePath = Path.Combine(weekPath, fileName);
-
                 File.Copy(filePath, targetFilePath, true);
                 copiedFiles++;
                 Console.Clear();
@@ -47,24 +46,37 @@ public class FileCopyRater
     {
         List<DirInfoEntity> directoryInfos = new List<DirInfoEntity>();
         
-        foreach(string dir in directories)
+        for(int i = 0; i < directories.Length; i++)
         {
-            string dirName = dir.Split(@"\", StringSplitOptions.RemoveEmptyEntries).Last();
+            string dirName = directories[i].Split(@"\", StringSplitOptions.RemoveEmptyEntries).Last();
             string[] dirNameInfo = dirName.Split(" ");
             string dateString = dirNameInfo[0] + " " + dirNameInfo[1];
             DateTime lessonDate = DateTime.ParseExact(dateString, "yyyy-MM-dd HH.mm.ss", null);
             DayOfWeek dayOfWeek = lessonDate.DayOfWeek;
             string nameWithCather = dirName[(dateString.Length + 1)..];
-            string[] dirVideos = GetVideoPaths(directories[0]);
+            string[] dirVideos = GetVideoPaths(directories[i]);
 
             if (nameWithCather.IndexOf("zoom5", StringComparison.Ordinal) != -1)
             {
                 DirInfoEntity dirInfoEntity = new DirInfoEntity()
                 {
-                    originalDir = dir,
+                    originalDir = directories[i],
                     name = nameWithCather[("zoom5".Length + 1)..],
                     dayOfWeek = DirInfoEntity.GetShortDayOfWeek(dayOfWeek.ToString()),
                     categories = "Zoom5",
+                    time = lessonDate,
+                    videos = dirVideos
+                };
+                directoryInfos.Add(dirInfoEntity);
+            }
+            else if(nameWithCather.IndexOf("zoom5", StringComparison.Ordinal) != -1)
+            {
+                DirInfoEntity dirInfoEntity = new DirInfoEntity()
+                {
+                    originalDir = directories[i],
+                    name = TruncateFromEnd(nameWithCather, 7),
+                    dayOfWeek = DirInfoEntity.GetShortDayOfWeek(dayOfWeek.ToString()),
+                    categories = "Zoom4",
                     time = lessonDate,
                     videos = dirVideos
                 };
@@ -74,8 +86,8 @@ public class FileCopyRater
             {
                 DirInfoEntity dirInfoEntity = new DirInfoEntity()
                 {
-                    originalDir = dir,
-                    name = TruncateFromEnd(nameWithCather, 7),
+                    originalDir = directories[i],
+                    name = nameWithCather[(dateString.Length + 1)..],
                     dayOfWeek = DirInfoEntity.GetShortDayOfWeek(dayOfWeek.ToString()),
                     categories = "Zoom4",
                     time = lessonDate,

@@ -49,5 +49,6 @@ public class FileCreator
     {
         Directory.CreateDirectory(Path.Join(path, "Zoom5"));
         Directory.CreateDirectory(Path.Join(path, "Zoom4"));
+        Directory.CreateDirectory(Path.Join(path, "Another"));
     }
 }

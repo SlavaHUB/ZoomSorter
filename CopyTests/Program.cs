@@ -10,7 +10,8 @@ string pathSource = Path.Join(pathDesktop, "SortedZoomVideo");
 FileCreator fileCreator = new FileCreator(pathSource);
 fileCreator.CreateMainFolder("Videos");
 
-string zoomPath = @$"C:\Users\{Environment.UserName}\Documents\Zoom";
+// string zoomPath = @$"C:\Users\{Environment.UserName}\Documents\Zoom";
+string zoomPath = @"D:\test\";
 
 FileCopyRater fileCopyRater = new FileCopyRater(zoomPath, fileCreator.FullPath);
 fileCopyRater.CopyFiles();

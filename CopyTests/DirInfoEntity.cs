@@ -28,6 +28,6 @@ public class DirInfoEntity
 
     public override string ToString()
     {
-        return $"{dayOfWeek}/{name}/{categories}/{time}";
+        return $"{time}".Replace(':', '.') + @$"-{name}.mp4";
     }
 }
