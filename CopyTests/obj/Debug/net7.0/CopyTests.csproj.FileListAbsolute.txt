@@ -1,0 +1,15 @@
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\bin\Debug\net7.0\CopyTests.exe
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\bin\Debug\net7.0\CopyTests.deps.json
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\bin\Debug\net7.0\CopyTests.runtimeconfig.json
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\bin\Debug\net7.0\CopyTests.dll
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\bin\Debug\net7.0\CopyTests.pdb
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\obj\Debug\net7.0\CopyTests.csproj.AssemblyReference.cache
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\obj\Debug\net7.0\CopyTests.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\obj\Debug\net7.0\CopyTests.AssemblyInfoInputs.cache
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\obj\Debug\net7.0\CopyTests.AssemblyInfo.cs
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\obj\Debug\net7.0\CopyTests.csproj.CoreCompileInputs.cache
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\obj\Debug\net7.0\CopyTests.dll
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\obj\Debug\net7.0\refint\CopyTests.dll
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\obj\Debug\net7.0\CopyTests.pdb
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\obj\Debug\net7.0\CopyTests.genruntimeconfig.cache
+D:\projects\dotnet-projects\tests\CopyTests\CopyTests\obj\Debug\net7.0\ref\CopyTests.dll
