@@ -8,6 +8,7 @@ public class DirInfoEntity
     public string name { get; set; }
     public string categories { get; set; }
     public  string[] videos { get; set; }
+    
     public static string GetShortDayOfWeek(string fullWeekDay)
     {
         var weekDays = new List<string>()
