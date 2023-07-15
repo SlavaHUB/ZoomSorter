@@ -7,7 +7,6 @@ public class DirInfoEntity
     public DateTime time { get; set; }
     public string name { get; set; }
     public string categories { get; set; }
-    
     public  string[] videos { get; set; }
     public static string GetShortDayOfWeek(string fullWeekDay)
     {
