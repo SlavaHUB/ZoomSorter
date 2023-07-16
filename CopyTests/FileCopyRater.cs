@@ -11,7 +11,7 @@ public class FileCopyRater
         _fullPath = fullPath;
     }
 
-    public void CopyFiles()
+    public void CopyFiles(DateTime dateFilter)
     {
         var targetDirectories = GetDirs();
         var directoriesInfo = GetDirInfoEntities(targetDirectories);
@@ -19,7 +19,7 @@ public class FileCopyRater
         int copiedFiles = 0;
         int progressBarWidth = 40;
         
-        foreach (var directoryInfo in directoriesInfo)
+        foreach (var directoryInfo in directoriesInfo.Where(directory => directory.time <= dateFilter))
         {
            Console.WriteLine();
             foreach (string filePath in directoryInfo.videos)
