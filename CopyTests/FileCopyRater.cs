@@ -19,7 +19,7 @@ public class FileCopyRater
         int copiedFiles = 0;
         int progressBarWidth = 40;
         
-        foreach (var directoryInfo in directoriesInfo.Where(directory => directory.time <= dateFilter))
+        foreach (var directoryInfo in directoriesInfo.Where(directory => directory.time >= dateFilter))
         {
            Console.WriteLine();
             foreach (string filePath in directoryInfo.videos)
